@@ -7,6 +7,7 @@ CREATE TABLE CLIENT
     address VARCHAR(100) NOT NULL,
     nif VARCHAR(20) NOT NULL,
     active VARCHAR(30) NOT NULL,
+    role VARCHAR(20) NOT NULL,
     PRIMARY KEY (id_clt)
 );
 
@@ -28,8 +29,8 @@ CREATE TABLE STOCK
 
 CREATE TABLE PRODUCT
 (
-    id_prod INT NOT NULL,
-    name VARCHAR(100) NOT NULL auto_increment,
+    id_prod INT NOT NULL auto_increment,
+    name VARCHAR(100) NOT NULL,
     description VARCHAR(200) NOT NULL,
     price NUMERIC(10, 2) NOT NULL,
     id_cat INT NOT NULL,
@@ -65,7 +66,6 @@ CREATE TABLE RECEIPT
 (
     id_rct INT NOT NULL auto_increment,
     emi_date DATE NOT NULL,
-    client_nif VARCHAR(20) NOT NULL,
     receipt_info VARCHAR(1000) NOT NULL,
     total NUMERIC(10, 2) NOT NULL,
     id_order INT NOT NULL,
