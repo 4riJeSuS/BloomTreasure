@@ -16,6 +16,8 @@ public class Product {
     private String description;
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal price;
+    @Column(length = 255)
+    private String imageUrl;
 
     @ManyToOne
     @JoinColumn(name = "id_cat", nullable = false)
@@ -82,5 +84,12 @@ public class Product {
     }
     public void setItems(List<ItemOrder> items) {
         this.items = items;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
