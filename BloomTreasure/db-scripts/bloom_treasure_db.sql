@@ -19,13 +19,13 @@ CREATE TABLE CATEGORY
     PRIMARY KEY (id_cat)
 );
 
-CREATE TABLE STOCK
-(
-    id_stk INT NOT NULL auto_increment,
-    quantity INT NOT NULL,
-    state VARCHAR(30) NOT NULL,
-    PRIMARY KEY (id_stk)
-);
+--CREATE TABLE STOCK
+--(
+--    id_stk INT NOT NULL auto_increment,
+--    quantity INT NOT NULL,
+--    state VARCHAR(30) NOT NULL,
+--    PRIMARY KEY (id_stk)
+--);
 
 CREATE TABLE PRODUCT
 (

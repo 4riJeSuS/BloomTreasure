@@ -29,6 +29,6 @@ public class SignupController {
         clientRepository.save(client);
 
         // Redireciona para o login após sucesso
-        return "redirect:/login?success";
+        return "redirect:/?registered=true";
     }
 }

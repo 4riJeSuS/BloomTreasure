@@ -31,7 +31,9 @@
                 <h5 class="border-bottom pb-2">Categorias</h5>
                 <ul class="list-unstyled pt-2">
                     <li th:each="cat : ${categories}" class="mb-2">
-                        <a href="#" class="category-link" th:text="${cat.name}">Nome da Categoria</a>
+                        <a th:href="@{/category/{id}(id=${cat.id_cat})}"
+                           class="category-link"
+                           th:text="${cat.name}">Nome da Categoria</a>
                     </li>
                 </ul>
             </div>

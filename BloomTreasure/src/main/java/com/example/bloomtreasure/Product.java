@@ -18,14 +18,12 @@ public class Product {
     private BigDecimal price;
     @Column(length = 255)
     private String imageUrl;
+    @Column(nullable = false)
+    private Integer stock;
 
     @ManyToOne
     @JoinColumn(name = "id_cat", nullable = false)
     private Category category;
-
-    @ManyToOne
-    @JoinColumn(name = "id_stk", nullable = false)
-    private Stock stock;
 
     @ManyToMany
     @JoinTable(
@@ -36,13 +34,6 @@ public class Product {
     private List<ItemOrder> items;
 
     public Product() {}
-
-    public Stock getStock() {
-        return stock;
-    }
-    public void setStock(Stock stock) {
-        this.stock = stock;
-    }
 
     public Category getCategory() {
         return category;
@@ -63,6 +54,13 @@ public class Product {
     }
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getStock() {
+        return stock;
+    }
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 
     public String getName() {
